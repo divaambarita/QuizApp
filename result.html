@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Hasil Quiz Anda</h2>
+        <p>Nama: <span id="namaPemain"></span></p>
+        <p>NIM: <span id="nimPemain"></span></p>
+        <p>Skor Total: <span id="totalSkor"></span></p>
+        <button onclick="location.href='index.html'">Ulangi Quiz</button>
+    </div>
+    <script>
+        document.getElementById('namaPemain').innerText = localStorage.getItem('nama');
+        document.getElementById('nimPemain').innerText = localStorage.getItem('nim');
+        document.getElementById('totalSkor').innerText = localStorage.getItem('skor');
+    </script>
+</body>
+</html>
